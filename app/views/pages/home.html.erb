@@ -1,1 +1,58 @@
-<h1>testing connection</h1>
+<% if @current_user.nil? %>
+
+  <div class="page-container">
+    <header>
+      <div class="welcome">
+        <h1>がんばって！</h1>
+        <h3>いらっしゃいませ! Welcome to Ganbatte!</h3>
+      </div> <!--end of welcome div-->
+    </header>
+
+    <main>
+      <div class="home-btns">
+
+        <%= link_to 'Sign In', login_path, :class => 'login-btn' %>
+        <%= link_to 'Sign Up', new_user_path, :class => 'signup-btn' %>
+      </div><!--end of home-btns container-->
+    </main>
+    <footer>
+      <p>EJ Willard &copy;2018</p>
+      <div class="footer-socials">
+        <a href='#'>Twitter</a>
+        <a href='#'>Gmail</a>
+        <a href='#'>Github</a>
+        <a href='#'>Facebook</a>
+      </div>
+    </footer>
+
+  <% else %>
+
+    <main>
+      <div class="homepage">
+
+        <div class="personal-btns">
+          <%= link_to 'My Lessons'  %>
+          <%# #lesson_path, :class => 'lesson-btn' %>
+          <%= link_to 'My Quizzes' %>
+          <%#  quiz_path, :class => 'quiz-btn' %>
+        </div> <!--end of personal-btns-->
+
+        <div class="personal-stats">
+          <p>Welcome back <%= "#{@current_user.username.capitalize}" %></p>
+            <p>You have currently learned XYZ, your next lesson is XYZ, your current leanring streak is X days in a row. Your current score percentage is X%</p>
+        </div>
+    </main>
+    <footer>
+      <p>EJ Willard &copy;2018</p>
+      <div class="footer-socials">
+        <a href='#'>Twitter</a>
+        <a href='#'>Gmail</a>
+        <a href='#'>Github</a>
+        <a href='#'>Facebook</a>
+      </div>
+    </footer>
+  </div><!--end of homepage div-->
+
+  </div> <!--end of page container-->
+
+  <% end %>

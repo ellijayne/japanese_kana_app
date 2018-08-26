@@ -1,0 +1,21 @@
+<div class="login-page">
+
+
+  <h1>Sign In</h1>
+
+  <%= flash[:error] %>
+  <%= form_tag login_path do %>
+
+    <%= label_tag :username %>
+
+    <%= text_field_tag :username, nil, :class => "input-field" %>
+
+    <br />
+    <%= label_tag :password %>
+
+    <%= password_field_tag :password, nil, :class => "input-field" %>
+    <br />
+    <%= submit_tag 'Login', :class => "submit-btn" %>
+    <% end %>
+    
+</div>
