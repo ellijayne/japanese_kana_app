@@ -1,0 +1,7 @@
+<h1>All Characters:</h1>
+
+<% @characters.each do |character| %>
+<%= image_tag character.image, :class => "kana-image"%>
+<p><%= character.kana %> </p>
+<p><%== character.info %> </p>
+<% end %>

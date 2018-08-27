@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post '/login' => 'session#create' #perform the login
   delete '/login' => 'session#destroy' #perform signout/'delete' the signin
 
+  resources :characters, :only => [:index, :show]
 
 
 
