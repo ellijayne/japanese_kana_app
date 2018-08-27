@@ -2,12 +2,17 @@
 
   <h1>Sign Up</h1>
 
+  <%# below, is going through all error messages like that email is taken wrong email/password auth messages and taking off the first word from th sentance which either says 'email' or 'username' and then printing the message without that first word.  %>
   <% if @user.errors.any? %>
-  <ol>
-    <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ol>
+    <div class="error-message">
+      <% @user.errors.full_messages.each do |message| %>
+        <% arr = message.split(" ") %>
+        <% arr.shift %>
+        <% message = arr.join(" ") %>
+
+        <p><%= message %></p>
+      <% end %>
+    </div>
   <% end %>
 
   <%= form_for @user do |f| %>
@@ -20,15 +25,23 @@
         <%= f.label :email %>
         <%= f.email_field :email, :required => true, :class => "email-field" %>
         <br />
+
         <%= f.label :password %>
-        <%= f.password_field :password, :class => "input-field" %>
+        <%= f.password_field :password, :class => "input-field", :required => true %>
         <br />
+
+        <%= f.label "Confirm password", :class => "input-label"%><br />
+        <%= f.password_field :password_confirmation, :required => true, :class => "input-box" %>
         <!-- think i may need these input fields on the form page but commented out for now until john shows us how to do it -->
 
         <!-- # <%#f.label :image %>
         # <%# f.url_field :image %> -->
         <br />
         <%= f.submit "Sign up", :class => "submit-btn" %>
+        <br />
+        <a href='/auth/facebook'>Sign Up with Facebook</a>
+
+
       </div> <!--end of inner sign up div-->
   <% end %>
 </div><!--end of login-page div-->
