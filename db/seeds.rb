@@ -7,7 +7,7 @@ user3 = User.create :username => 'ringo', :email => 'ringo@ga.co', :password => 
 
 Character.destroy_all
 
-# lesson/test 1
+# lesson 1
 
 a = Character.create :kana => 'あ', :image => "あ.png", :info => "<p>あ is pronounced like the 'a' in 'car' or 'applauding'.</p>
 <p>To remember this kana, find the capital 'A' inside of it. This 'A' will tell you that this kana is also 'a' aka あ. There is another similar kana, お, but that one doesn't have an 'A' in it, which is how you can differentiate them.</p>"
@@ -25,7 +25,7 @@ u = Character.create :kana => 'う', :image => 'う.png', :info => '<p>う is pr
 <p>To remember this kana, notice the "U" shape right in it! It\'s sideways but it\'s there, telling you what this kana is.</p>'
 
 
-#lesson/test 2
+#lesson 2
 
 ka = Character.create :kana => 'か', :image => "か.png", :info => '<p>か is just the "K" sound plus あ, making a "ka" sound. It sounds like the "ca" in "car".<p>
 <p>♫ Cannn, can you do the can can, can you do the can can… ♪</p>
@@ -44,7 +44,7 @@ ku = Character.create :kana => 'く', :image => 'く.png', :info => '<p>く is j
 <p>To remember this, think of this kana being the mouth of a coo-coo/cuckoo (ku) bird popping out saying "ku ku, ku ku!"</p>'
 
 
-#lesson/test 3
+#lesson 3
 
 sa = Character.create :kana => 'さ', :image => 'さ.jpg', :info => '<p>さ is just the "S" sound plus あ, making a "sa" sound like the "sa" at the start of "samurai".</p>
 <p>This kana looks like a weird sign (where the "si" of "sign" is pronounced like "sa") stuck in the ground. Focus on the pronunciation, not the spelling, from this mnemonic.</p>'
@@ -63,7 +63,7 @@ su = Character.create :kana => 'す', :image => 'す.jpg', :info => '<p>す is j
 <p>See the swing (su) doing a loop-dee-loop throwing that poor kid off of it? Imagine him screaming "I\'M GONNA SUE SOMEBODY FOR THIIIIIiiiissss" as he flies off into the distance.</p>'
 
 
-#lesson/test 4
+#lesson 4
 
 ta = Character.create :kana => 'た', :image => 'た.jpg', :info => '<p>た is just the "T" sound plus あ, making a "ta" sound like the "ta" in "taco".</p>
 <p>This looks just like the romaji that spells it out: "ta"</p>'
@@ -83,7 +83,7 @@ tsu = Character.create :kana => 'つ', :image => 'つ.jpg', :info => '<p>つ is 
 <p>Do you remember the kana し? It\'s a hook that\'s dipped straight down into the water. This didn\'t work very well (you caught a poor seal!), so now you\'re trying a new strategy: pulling the line behind you in a boat. This way the hook is facing sideways. It works, too! You pull up your line and you have two (tsu) fish!</p>'
 
 
-#lesson/test 5
+#lesson 5
 
 na = Character.create :kana => 'な', :image => 'な.jpg', :info => '<p>な is just the "N" sound plus あ, making a "na" sound like the "na" in "nah, mate, yeah, nah".</p>
 <p>The naughty (na) nun is praying in front of the cross, asking for forgiveness of her naughty ways.</p>
@@ -106,7 +106,7 @@ nu = Character.create :kana => 'ぬ', :image => 'ぬ.jpg', :info => '<p>ぬ is j
 <p>This kana looks like some noodles (nu). There are several other kana that are similar to this one (れ, め, ね, わ) but you know this one is noodles because there are no sharp sides in it. It\'s 100% smooth and bendable, like noodles! It even has an extra loop at the back, because it is a noodle.</p>'
 
 
-#lesson/text 6
+#lesson 6
 
 ha = Character.create :kana => 'は', :image => 'は.png', :info => '<p>は is just the "H" sound plus あ, making a "ha" sound like the "ha" in "hahahahaha".</p>
 <p>This kana looks like the uppercase letter "H" plus the lowercase letter "a." What does that spell? "Ha!"</p>
@@ -126,7 +126,7 @@ fu = Character.create :kana => 'ふ', :image => 'ふ.jpg', :info => '<p>ふ is j
 <p>Usually this kana is pronounced with an "f" (fu) in hiragana, so we\'re going to go with that. However, this kana does look a lot like a hula dancer too, so keep the "hu" in mind as well. If you want, you can think of this hula dancer as a "fu-reaky hula dancer" to remember the fu.</p>'
 
 
-#lesson/text 7
+#lesson 7
 
 ma = Character.create :kana => 'ま', :image => 'ま.jpg', :info => '<p>ま is just the "M" sound plus あ, making a "ma" sound like the "ma" in "march".</p>
 <p>Removing your head? Doubling your hands and arms? What sort of evil magic is this? What makes it weirder is that your mama is the one doing this magic. Imagine your ma looking like this. Aghh!</p>'
@@ -145,7 +145,7 @@ mu = Character.create :kana => 'む', :image => 'む.jpg', :info => '<p>む is j
 <p>"Moooooo" (mu), says the cow. "MOOOOOOO."</p>'
 
 
-#lesson/test 8
+#lesson 8
 
 ra = Character.create :kana => 'ら', :image => 'ら.png', :info => '<p>ら is just the "R" sound plus あ, making a "ra" sound like "rah".</p>
 <p>The rapper is rapping at the DJ table.</p>'
@@ -165,7 +165,7 @@ ru = Character.create :kana => 'る', :image => 'る.jpg', :info => '<p>る is j
 <p>The is like ろ (you\'ll learn it in a second) except it has a loop at the end. る is a crazier route (ru). There is a loop (ru) at the end. Are there no rules on this road?</p>'
 
 
-#lesson/test 9
+#lesson 9
 
 ya = Character.create :kana => 'や', :image => 'や.jpg', :info => '<p>や is just the "Y" sound plus あ, making a "ya" sound like the "ya" in "yatch".</p>
 <p>Do you see the yak in this kana?</p>'
@@ -186,6 +186,121 @@ wo = Character.create :kana => 'を', :image => 'を.jpg', :info => '<p>を is j
 
 n = Character.create :kana => 'ん', :image => 'ん.jpg', :info => '<p>ん is just the "N" sound, that\'s it. It\'s the only kana that consists of a single consonant.</p>
 <p>This kana looks just like the lowercase "n" in English. They happen to be the same sounds, as well. How convenient! nnnんんん.</p>'
+
+
+
+###LESSONS###
+Lesson.destroy_all
+
+lessonOne = Lesson.create :lessonName => "Lesson One: あ、え、い、お、う　(A, E, I, O, U)"
+lessonTwo = Lesson.create :lessonName => "Lesson Two:　か、け、き、こ、く (Ka, Ke, Ki, Ko, Ku)"
+lessonThree = Lesson.create :lessonName => "Lesson Three:　さ、せ、し、そ、す　(Sa, Se, Shi, So, Su)"
+lessonFour = Lesson.create :lessonName => "Lesson Four:　た、て、ち、と、つ (Ta, Te, Chi, To, Tsu)"
+lessonFive = Lesson.create :lessonName => "Lesson Five:　な、ね、に、の、ぬ (Na, Ne, Ni, No, Nu)"
+lessonSix = Lesson.create :lessonName => "Lesson Six:　は、へ、ひ、ほ、ふ (Ha, He, Hi, Ho, Fu)"
+lessonSeven = Lesson.create :lessonName => "Lesson Seven:　ま、め、み、も、む (Ma, Me, Mi, Mo, Mu)"
+lessonEight = Lesson.create :lessonName => "Lesson Eight:　ら、れ、り、ろ、る (Ra, Re, Ri, Ro, Ru)"
+lessonNine = Lesson.create :lessonName => "Lesson Nine:　や、ゆ、よ、わ、を、ん (Ya, Yu, Yo, Wa, Wo, N)"
+
+lessonOne.characters << a << e << i << o << u
+lessonTwo.characters << ka << ke << ki << ko << ku
+lessonThree.characters << sa << se << shi << so << su
+lessonFour.characters << ta << te << chi << to << tsu
+lessonFive.characters << na << ne << ni << no << nu
+lessonSix.characters << ha << he << hi << ho << fu
+lessonSeven.characters << ma << me << mi << mo << mu
+lessonEight.characters << ra << re << ri << ro << ru
+lessonNine.characters << ya << yu << yo << wa << wo << n
+
+#QUESTIONS
+Question.destroy_all
+
+#set 1
+
+q1 = Question.create :testQuestion => "あ", :answer => "あ,a"
+q2 = Question.create :testQuestion => "え", :answer => "え,e"
+q3 = Question.create :testQuestion => "い", :answer => "い,i"
+q4 = Question.create :testQuestion => "お", :answer => "お,o"
+q5 = Question.create :testQuestion => "う", :answer => "う,u"
+
+#set 2
+q6 = Question.create :testQuestion => "か", :answer => "か,ka"
+q7 = Question.create :testQuestion => "け", :answer => "け,ke"
+q8 = Question.create :testQuestion => "き", :answer => "き,ki"
+q9 = Question.create :testQuestion => "こ", :answer => "こ,ko"
+q10 = Question.create :testQuestion => "く", :answer => "く,ku"
+
+#set 3
+
+q11 = Question.create :testQuestion => "さ", :answer => "さ,sa"
+q12 = Question.create :testQuestion => "せ", :answer => "せ,se"
+q13 = Question.create :testQuestion => "し", :answer => "し,shi"
+q14 = Question.create :testQuestion => "そ", :answer => "そ,so"
+q15 = Question.create :testQuestion => "す", :answer => "す,su"
+
+#set 4
+
+q16 = Question.create :testQuestion => "た", :answer => "た,ta"
+q17 = Question.create :testQuestion => "て", :answer => "て,te"
+q18 = Question.create :testQuestion => "ち", :answer => "ち,chi"
+q19 = Question.create :testQuestion => "と", :answer => "と,to"
+q20 = Question.create :testQuestion => "つ", :answer => "つ,tsu"
+
+#set 5
+
+q21 = Question.create :testQuestion => "な", :answer => "な,na"
+q22 = Question.create :testQuestion => "ね", :answer => "ね,ne"
+q23 = Question.create :testQuestion => "に", :answer => "に,ni"
+q24 = Question.create :testQuestion => "の", :answer => "の,no"
+q25 = Question.create :testQuestion => "ぬ", :answer => "ぬ,nu"
+
+#set 6
+
+q26 = Question.create :testQuestion => "は", :answer => "は,ha"
+q27 = Question.create :testQuestion => "へ", :answer => "へ,he"
+q28 = Question.create :testQuestion => "ひ", :answer => "ひ,hi"
+q29 = Question.create :testQuestion => "ほ", :answer => "ほ,ho"
+q30 = Question.create :testQuestion => "ふ", :answer => "ふ,fu,hu"
+
+#set 7
+
+q31 = Question.create :testQuestion => "ま", :answer => "ま,ma"
+q32 = Question.create :testQuestion => "め", :answer => "め,me"
+q33 = Question.create :testQuestion => "み", :answer => "み,mi"
+q34 = Question.create :testQuestion => "も", :answer => "も,mo"
+q35 = Question.create :testQuestion => "む", :answer => "む,mu"
+
+#set 8
+q36 = Question.create :testQuestion => "ら", :answer => "ら,ra"
+q37 = Question.create :testQuestion => "れ", :answer => "れ,re"
+q38 = Question.create :testQuestion => "り", :answer => "り,ri"
+q39 = Question.create :testQuestion => "ろ", :answer => "ろ,ro"
+q40 = Question.create :testQuestion => "る", :answer => "る,ru"
+
+#set 9
+
+q41 = Question.create :testQuestion => "や", :answer => "や,ya"
+q42 = Question.create :testQuestion => "ゆ", :answer => "ゆ,yu"
+q43 = Question.create :testQuestion => "よ", :answer => "よ,yo"
+q44 = Question.create :testQuestion => "わ", :answer => "わ,wa"
+q45 = Question.create :testQuestion => "を", :answer => "を,wo"
+q46 = Question.create :testQuestion => "ん", :answer => "ん,n"
+
+
+
+lessonOne.questions << q1 << q2 << q3 << q4 << q5
+lessonTwo.questions << q6 << q7 << q8 << q9 << q10
+lessonThree.questions << q11 << q12 << q13 << q14 << q15
+lessonFour.questions << q16 << q17 << q18 << q19 << q20
+lessonFive.questions << q21 << q22 << q23 << q24 << q25
+lessonSix.questions << q26 << q27 << q28 << q29 << q30
+lessonSeven.questions << q31 << q32 << q33 << q34 << q35
+lessonEight.questions << q36 << q37 << q38 << q39 << q40
+lessonNine.questions << q41 << q42 << q43 << q44 << q45 << q46
+
+
+
+#l1.questions << qwo << qwa
 
 #think for seeing tests would do something like
 #test1 = Test.create = [character.a, character.e, character.i, character.o, character.u]

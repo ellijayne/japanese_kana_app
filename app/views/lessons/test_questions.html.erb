@@ -1,0 +1,17 @@
+<div class="test-page">
+  <header>
+    <h1>がんばろう! Good Luck!</h1>
+  </header>
+
+  <main>
+    <!-- question and normal text box - finding ans happens in js.  -->
+    <h3>Type the sound of the Hiragana Kana in the box below it!</h3>
+    <% @lesson.questions.each do |question| %>
+      <p class="test-question"><%= question.testQuestion %></p>
+
+    <%= text_field_tag(:text, "") %>
+    <% end %>
+   <%= submit_tag("Submit") %>
+
+  </main>
+</div>
