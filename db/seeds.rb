@@ -192,15 +192,15 @@ n = Character.create :kana => 'ん', :image => 'ん.jpg', :info => '<p>ん is ju
 ###LESSONS###
 Lesson.destroy_all
 
-lessonOne = Lesson.create :lessonName => "Lesson One: あ、え、い、お、う　(A, E, I, O, U)"
-lessonTwo = Lesson.create :lessonName => "Lesson Two:　か、け、き、こ、く (Ka, Ke, Ki, Ko, Ku)"
-lessonThree = Lesson.create :lessonName => "Lesson Three:　さ、せ、し、そ、す　(Sa, Se, Shi, So, Su)"
-lessonFour = Lesson.create :lessonName => "Lesson Four:　た、て、ち、と、つ (Ta, Te, Chi, To, Tsu)"
-lessonFive = Lesson.create :lessonName => "Lesson Five:　な、ね、に、の、ぬ (Na, Ne, Ni, No, Nu)"
-lessonSix = Lesson.create :lessonName => "Lesson Six:　は、へ、ひ、ほ、ふ (Ha, He, Hi, Ho, Fu)"
-lessonSeven = Lesson.create :lessonName => "Lesson Seven:　ま、め、み、も、む (Ma, Me, Mi, Mo, Mu)"
-lessonEight = Lesson.create :lessonName => "Lesson Eight:　ら、れ、り、ろ、る (Ra, Re, Ri, Ro, Ru)"
-lessonNine = Lesson.create :lessonName => "Lesson Nine:　や、ゆ、よ、わ、を、ん (Ya, Yu, Yo, Wa, Wo, N)"
+lessonOne = Lesson.create :lessonName => "Lesson One: あ、え、い、お、う"
+lessonTwo = Lesson.create :lessonName => "Lesson Two:　か、け、き、こ、く"
+lessonThree = Lesson.create :lessonName => "Lesson Three:　さ、せ、し、そ、す"
+lessonFour = Lesson.create :lessonName => "Lesson Four:　た、て、ち、と、つ"
+lessonFive = Lesson.create :lessonName => "Lesson Five:　な、ね、に、の、ぬ"
+lessonSix = Lesson.create :lessonName => "Lesson Six:　は、へ、ひ、ほ、ふ"
+lessonSeven = Lesson.create :lessonName => "Lesson Seven:　ま、め、み、も、む"
+lessonEight = Lesson.create :lessonName => "Lesson Eight:　ら、れ、り、ろ、る"
+lessonNine = Lesson.create :lessonName => "Lesson Nine:　や、ゆ、よ、わ、を、ん"
 
 lessonOne.characters << a << e << i << o << u
 lessonTwo.characters << ka << ke << ki << ko << ku

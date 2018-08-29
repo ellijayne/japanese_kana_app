@@ -277,6 +277,40 @@ footer {
     background-image: url("kana-wave-banner.jpg");
 }
 
+////////LESSON INDEX////
+
+.lesson-index {
+  background: linear-gradient( #004080, $blue, $light-blue, #FFFF99);
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 40px;
+
+  .lesson-header {
+    font-family: $english-head-font;
+    font-size: 6vw;
+  }
+
+  li {
+    list-style-type: none;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $hover;
+      transition: 2s;
+    }
+  }
+}
+
+////////////INDIVIDUAL LESSONS/////
+
+.indiv-lesson {
+  max-width: 90vw;
+  padding-left: 10px;
+}
+
 
 
 ////////IMAGES so far! //////
@@ -318,7 +352,19 @@ footer {
       margin-bottom: 0 !important;
     }
   }
+  .lesson-index {
+    padding-bottom: 50px;
+  }
+
+  li {
+    list-style-type: none;
+    font-size: 2.5vw;
+  }
 }
+
+
+
+
 @media (min-width: 730px) {
   .english-header {
     padding: 10px !important;
