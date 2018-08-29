@@ -20,16 +20,15 @@
 
         <% if @current_user.present? %>
         <%=  link_to 'Home', root_path, :class => "nav-link" %>
-        <%= link_to 'My Lessons', lessons_path, :class => 'lesson-btn' %>
-        <%# link_to 'My Quizzes',  %>
-        <%#  quiz_path, :class => 'quiz-btn' %>
+        <%= link_to 'My Lessons', lessons_path, :class => 'nav-link' %>
           <%= link_to 'Hiragana Chart', characters_path, :class => "nav-link" %>
-          <%= link_to 'Practice Writing', :class => "nav-link" %>
-          <%= link_to 'Menu', :class => "nav-link" %>
+          <%# link_to 'Practice Writing', :class => "nav-link" %>
 
           <%=  link_to 'Log Out', login_path, :method => 'delete', :class => "nav-link" %> <%# make this dropdown %>
 
-          <%= link_to 'Admin Area', users_path if @current_user.admin? %>
+          <% if @current_user.admin? %>
+            <%= link_to 'Admin Area', users_path, :class=> "nav-link" %>
+          <% end %>
 
         <% else %>
           <%= link_to 'Sign In', login_path, :class => "nav-link" %> |
