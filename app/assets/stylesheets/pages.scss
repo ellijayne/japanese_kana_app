@@ -334,27 +334,27 @@ footer {
 
 //////////////QUIZ PAGE///////
 .test-page {
-  @extend .login-page;
+  @extend .lesson-index;
   padding-left: 20px;
 
   h1 {
-    position: relative;
-    z-index: 2;
     color: white;
     text-align: center;
   }
   h3 {
-    position: relative;
-    z-index: 2;
     color: white;
     font-size: 5vw;
   }
 
   p {
-    position: relative;
-    z-index: 2;
     color: white;
     font-size: 8vw;
+  }
+  .submit-btn {
+    color: white;
+     background-color: $blue;
+     margin: 10px 0;
+     padding: 5px 10px;
   }
 }
 
