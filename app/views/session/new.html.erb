@@ -1,22 +1,24 @@
 <div class="login-page">
+  <div class="login-form-container">
+      <h1 class="login-header">Sign In</h1>
 
+      <%= flash[:error] %>
+      <%= form_tag login_path do %>
+        <div class="form-label">
+          <%= label_tag :username %>
+        </div>
+        <%= text_field_tag :username, nil, :class => "input-field" %>
 
-  <h1>Sign In</h1>
+        <br />
+        <div class="form-label">
+          <%= label_tag :password %>
+        </div>
+        <%= password_field_tag :password, nil, :class => "input-field" %>
+        <br />
+        <%= submit_tag 'Login', :class => "submit-btn" %>
+        <br />
 
-  <%= flash[:error] %>
-  <%= form_tag login_path do %>
-
-    <%= label_tag :username %>
-
-    <%= text_field_tag :username, nil, :class => "input-field" %>
-
-    <br />
-    <%= label_tag :password %>
-
-    <%= password_field_tag :password, nil, :class => "input-field" %>
-    <br />
-    <%= submit_tag 'Login', :class => "submit-btn" %>
-    <a href='/auth/facebook'>Sign in with Facebook</a>
-    <% end %>
-
+        <a class="facebook" href='/auth/facebook'>Sign in with Facebook</a>
+        <% end %>
+  </div><!--end of login container-->
 </div>

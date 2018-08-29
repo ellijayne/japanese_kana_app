@@ -48,19 +48,26 @@ body {
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
-  h1 {
+
+  .english-header {
     padding: 20px;
     text-align: center;
     z-index: 2;
     position: relative;
     color: #fff;
+    font-weight: 700;
+    font-family: $english-head-font;
+    font-size: 20vw;
+    color: white;
   }
 
-  h4 {
+  .kana-header {
     text-align: center;
     z-index: 2;
     position: relative;
     color: #fff;
+    font-family: $japanese-font;
+    font-size: 10vw;
   }
 
   p {
@@ -89,36 +96,19 @@ body {
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
-    background-size: cover;
+    background-size:cover;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     background-image: url("kana-wave-banner.jpg");
-
-}
-
-.english-header {
-  font-family: $english-head-font;
-  font-size: 20vw;
-  color: white;
-}
-
-.kana-header {
-  @extend .english-header;
-  font-family: $japanese-font;
-  font-size: 10vw;
-}
-
-.kana-type {
-  font-family: $japanese-font;
 }
 
 .home-main {
   background-color: $blue;
   color: white;
   text-align: center;
-
+  padding-top: 20px;
 
   #welcome-kana {
-    font-size: 1.5rem;
+    font-size: 2rem;
     max-width: 90vw;
     margin: 0 auto;
     text-align: center;
@@ -137,18 +127,17 @@ body {
 
 nav {
   background-color: $blue;
-  padding: 9px 3px;
+  padding: 9px 5px;
 
   .nav-link {
     color: white;
+    display: inline;
   }
 
   a:hover {
     color: $hover;
     transition: 2s;
   }
-
-
 }
 
 footer {
@@ -157,13 +146,14 @@ footer {
   text-align: center;
   color: #004080;
   padding-top: 5px;
+  clear: both;
+  position: inherit;
 
   .footer-socials {
     padding-bottom: 7px;
 
     a {
       color: white;
-
     }
 
     a:hover {
@@ -185,6 +175,75 @@ footer {
   }
 }
 
+////////SIGN IN/SIGN UP ///////
+.login-page {
+  padding-top: 20px;
+  height: 68vh;
+  position: relative;
+  opacity: 0.7;
+  background: #111;
+  overflow: hidden;
+  // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+  .login-form-container {
+    margin-left: 20px;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+
+
+    .login-header {
+
+      font-family: $english-head-font;
+    }
+    .form-label {
+      font-size: 1.7rem;
+
+    }
+
+     .input-field {
+        border: solid 2px $blue;
+     }
+
+     .submit-btn {
+      color: white;
+       background-color: $blue;
+       margin: 10px 0;
+       padding: 5px 10px;
+       opacity: 1;
+     }
+     .facebook {
+      color: white;
+      padding: 2.5px;
+      border-radius: 3px;
+      border: 1px solid white;
+      background-color: #3B5998;
+      margin-bottom: 30px;
+     }
+  }
+}
+
+.login-page::before {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size:cover;
+    // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-image: url("kana-wave-banner.jpg");
+}
+
 
 ////////IMAGES so far! //////
 .kana-image {
@@ -193,4 +252,77 @@ footer {
 
 .kana-lesson-image {
   width: 40vw;
+}
+
+/////////////MEDIA Queries////////
+@media (min-width: 730px) {
+  .english-header {
+    padding: 10px !important;
+    font-size: 17vw !important;
+  }
+
+  .kana-header {
+    font-size: 8vw !important;
+  }
+
+  p {
+    font-size: 3vw !important;
+  }
+
+  .footer-socials {
+
+    a {
+      font-size: 2.5vw;
+    }
+  }
+  .disclaimer {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media(min-width: 970px) {
+  .english-header {
+    font-size: 10rem !important;
+  }
+
+  .kana-header {
+    font-size: 5rem !important;
+  }
+}
+@media(min-width: 1240px) {
+  .english-header {
+    margin: 0 auto;
+    max-width: 60vw;
+  }
+
+  .home-main {
+    #welcome-kana {
+      max-width: 70vw;
+      font-size: 3rem !important;
+    }
+
+    #welcome-english {
+      max-width: 70vw;
+      font-size: 3rem !important;
+    }
+
+    .app-blurb {
+      max-width: 70vw;
+      font-size: 2rem !important;
+    }
+  }
+  .ej-footer {
+    font-size: 2rem !important;
+  }
+  .footer-socials {
+
+    a {
+      font-size: 2rem !important;
+    }
+  }
+  .disclaimer {
+    font-size: 1rem !important;
+  }
+
+
 }
