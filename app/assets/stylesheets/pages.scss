@@ -333,6 +333,8 @@ footer {
 //////////////QUIZ PAGE///////
 .test-page {
   @extend .login-page;
+  padding-left: 20px;
+
   h1 {
     position: relative;
     z-index: 2;
@@ -352,18 +354,7 @@ footer {
     color: white;
     font-size: 8vw;
   }
-
-
 }
-
-
-
-////////IMAGES so far! //////
-.kana-image {
-  width: 24vw;
-}
-
-
 
 /////////////MEDIA Queries////////
 @media (min-width: 500px) {
@@ -402,6 +393,31 @@ footer {
   li {
     list-style-type: none;
     font-size: 2.5vw;
+  }
+
+  .test-page {
+    margin: auto 0;
+    min-height: 80vh;
+    .login-form-container {
+      max-width: 80vw;
+    }
+    h1 {
+      font-size: 5rem;
+    }
+    h3 {
+
+      font-size: 3.5rem;
+      text-align: center;
+    }
+
+    p {
+      position: relative;
+      z-index: 2;
+      color: white;
+      font-size: 8vw;
+    }
+
+
   }
 }
 
