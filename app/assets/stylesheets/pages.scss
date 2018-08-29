@@ -1,3 +1,191 @@
+////IMPORTS/////
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(//fonts.googleapis.com/earlyaccess/kokoro.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+  font-family: 'norwester';
+  src: url('../norwester.otf');
+}
+
+///////////////RESET///////////////////
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+///////////VARIABLES///////////
+$japanese-font: 'Noto Sans Japanese', sans-serif; //this is simple and standard good one to learn on
+$japanese-font2: 'Kokoro', serif; //but more scribbly but nice.
+$english-head-font: 'norwester', sans-serif;
+$english-font: 'Roboto', sans-serif;
+$hover: #FFAA43;
+$orange: rgb(255, 128, 41);
+$orange-t: rgba(255, 128, 41, 0.8);
+$blue: rgb(2, 166, 178);
+$blue-t: rgba(2, 166, 178, 0.8);
+$light-blue: rgb(41, 240, 255);
+$light-blue-t: rgba(41, 240, 255, 0.8);
+$burnt-orange: rgb(178, 73, 0);
+$burnt-orange-t: rgba(178, 73, 0, 0.8);
+
+body {
+  font-family: $english-font;
+
+}
+
+//////////LANDING PAGE//////////
+
+.home-header {
+  position: relative;
+  opacity: 0.7;
+  background: #111;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+  h1 {
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+  }
+
+  h4 {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+  }
+
+  p {
+    font-family: $english-head-font;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+    padding-bottom: 40px;
+  }
+}
+
+.home-header::before {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-image: url("kana-wave-banner.jpg");
+
+}
+
+.english-header {
+  font-family: $english-head-font;
+  font-size: 20vw;
+  color: white;
+}
+
+.kana-header {
+  @extend .english-header;
+  font-family: $japanese-font;
+  font-size: 10vw;
+}
+
+.kana-type {
+  font-family: $japanese-font;
+}
+
+.home-main {
+  background-color: $blue;
+  color: white;
+  text-align: center;
+
+
+  #welcome-kana {
+    font-size: 1.5rem;
+    max-width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #welcome-english {
+    @extend #welcome-kana;
+  }
+
+  .app-blurb {
+    @extend #welcome-kana;
+    font-size: 1rem;
+    padding: 20px 0;
+  }
+}
+
+nav {
+  background-color: $blue;
+  padding: 9px 3px;
+
+  .nav-link {
+    color: white;
+  }
+
+  a:hover {
+    color: $hover;
+    transition: 2s;
+  }
+
+
+}
+
+footer {
+  background: linear-gradient(yellow, $hover, $orange);
+  margin: 0 auto;
+  text-align: center;
+  color: #004080;
+  padding-top: 5px;
+
+  .footer-socials {
+    padding-bottom: 7px;
+
+    a {
+      color: white;
+
+    }
+
+    a:hover {
+      color: $light-blue;
+      transition: 2s;
+    }
+  }
+  .disclaimer {
+    color: #004080;
+    font-size: 0.7rem;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    color: $light-blue;
+    transition: 2s;
+  }
+}
+
+
 ////////IMAGES so far! //////
 .kana-image {
   width: 24vw;

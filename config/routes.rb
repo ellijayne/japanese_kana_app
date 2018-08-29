@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy' #perform signout/'delete' the signin
 
   resources :characters, :only => [:index, :show]
+  get '/lessons/:lesson_id/result' => 'lessons#result'
   resources :lessons, :only => [:index, :show] do
+  
     # nested url for custom url to tests in lessons
     get '/test_questions' => 'lessons#test_questions'
 

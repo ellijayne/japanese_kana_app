@@ -1,29 +1,24 @@
 <% if @current_user.nil? %>
 
   <div class="page-container">
-    <header>
+    <header class="home-header">
       <div class="welcome">
-        <h1>仮名をまなぶ！</h1>
-        <h3>いらっしゃいませ! Welcome to Kana-o-Manabu!</h3>
-      </div> <!--end of welcome div-->
+        <h1 class="english-header">Kana-o-Manabu!</h1>
+        <h4 class="kana-header">仮名をまなぶ！</h4>
+        <p>Learn Hiragana Fast!</p>
+        </div> <!--end of welcome div-->
     </header>
 
-    <main>
-      <div class="home-btns">
+    <main class="home-main">
+      <h3 id="welcome-kana" class="kana-type">いらっしゃいませ!<br /> <span id="welcome-english" class="english-type"> Welcome to Kana-o-Manabu!</h3>
+      <p class="app-blurb">Learn all 46 standard Hiragana characters fast with mneumonics! Due to hiragana's relative simplicity (at least compared to kanji), image-based mnemonics are a perfect method for memorization. Each hiragana character has a memorable illustration that goes along with it. <br />Get started today!</p>
+      <!-- <div class="home-btns">
 
-        <%= link_to 'Sign In', login_path, :class => 'login-btn' %>
-        <%= link_to 'Sign Up', new_user_path, :class => 'signup-btn' %>
+        <%# link_to 'Sign In', login_path, :class => 'login-btn' %>
+        <%# link_to 'Sign Up', new_user_path, :class => 'signup-btn' %>
       </div><!--end of home-btns container-->
     </main>
-    <footer>
-      <p>EJ Willard &copy;2018</p>
-      <div class="footer-socials">
-        <a href='#'>Twitter</a>
-        <a href='#'>Gmail</a>
-        <a href='#'>Github</a>
-        <a href='#'>Facebook</a>
-      </div>
-    </footer>
+
 
   <% else %>
 
@@ -42,15 +37,7 @@
             <p>You have currently learned XYZ, your next lesson is XYZ, your current leanring streak is X days in a row. Your current score percentage is X%</p>
         </div>
     </main>
-    <footer>
-      <p>EJ Willard &copy;2018</p>
-      <div class="footer-socials">
-        <a href='#'>Twitter</a>
-        <a href='#'>Gmail</a>
-        <a href='#'>Github</a>
-        <a href='#'>Facebook</a>
-      </div>
-    </footer>
+
   </div><!--end of homepage div-->
 
   </div> <!--end of page container-->

@@ -1,0 +1,11 @@
+
+<!-- show quiz results in here and try to show user all test scores and which ones they have gotten wrong?? -->
+<h1>Quiz Results</h1>
+
+<% @current_user.enrolments.each do |e| %>
+<ul>
+  <li>
+    <%= "score for #{e.lesson.lessonName}: #{e.score}" %>
+  </li>
+</ul>
+<% end %>

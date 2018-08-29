@@ -13,6 +13,7 @@
 #
 
 class User < ApplicationRecord
+  has_many :enrolments
 
   #VALIDATIONS/PASSWORDS
   has_secure_password
