@@ -8,8 +8,6 @@
 
     <% @lesson.characters.each do |character| %>
 
-      <h3><%= character.kana %></h3>
-
       <%= image_tag character.image, :class => "kana-lesson-image", :alt => "kana image" %>
 
       <%== character.info %>
@@ -17,6 +15,7 @@
     <% end %>
 
     <%= link_to "Take Quiz on #{@lesson.kanas}", lesson_test_questions_path(@lesson) %>
+    <br />
     <%= link_to 'Back to profile', root_path %>
 
 

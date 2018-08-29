@@ -31,6 +31,7 @@ $blue: rgb(2, 166, 178);
 $blue-t: rgba(2, 166, 178, 0.8);
 $light-blue: rgb(41, 240, 255);
 $light-blue-t: rgba(41, 240, 255, 0.8);
+$lesson-blue: #6EBBFD;
 $burnt-orange: rgb(178, 73, 0);
 $burnt-orange-t: rgba(178, 73, 0, 0.8);
 
@@ -309,6 +310,25 @@ footer {
 .indiv-lesson {
   max-width: 90vw;
   padding-left: 10px;
+
+  h1 {
+    color: $lesson-blue;
+  }
+
+  .kana-lesson-image {
+    width: 90vw;
+  }
+  a {
+    color: $lesson-blue;
+    text-decoration: none;
+    font-size: 5vw;
+  }
+
+  a:hover {
+    color: $hover;
+    transition: 2s;
+  }
+
 }
 
 
@@ -318,9 +338,7 @@ footer {
   width: 24vw;
 }
 
-.kana-lesson-image {
-  width: 40vw;
-}
+
 
 /////////////MEDIA Queries////////
 @media (min-width: 500px) {
