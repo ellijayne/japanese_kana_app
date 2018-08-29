@@ -328,6 +328,31 @@ footer {
     color: $hover;
     transition: 2s;
   }
+}
+
+//////////////QUIZ PAGE///////
+.test-page {
+  @extend .login-page;
+  h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+  }
+  h3 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 5vw;
+  }
+
+  p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 8vw;
+  }
+
 
 }
 
@@ -379,9 +404,6 @@ footer {
     font-size: 2.5vw;
   }
 }
-
-
-
 
 @media (min-width: 730px) {
   .welcome {
@@ -446,6 +468,7 @@ footer {
     font-size: 5rem !important;
   }
 }
+
 @media(min-width: 1240px) {
   .english-header {
     margin: 0 auto;
@@ -495,9 +518,7 @@ footer {
       margin: 0 auto;
     }
 
-    .kana-info {
-      font-size: 10vw !important;
-    }
+
     a {
       font-size: 2.5vw;
     }
