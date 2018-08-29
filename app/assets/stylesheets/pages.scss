@@ -384,17 +384,19 @@ footer {
 
 
 @media (min-width: 730px) {
-  .english-header {
-    padding: 10px !important;
-    font-size: 17vw !important;
-  }
+  .welcome {
+    .english-header {
+      padding: 10px !important;
+      font-size: 17vw !important;
+    }
 
-  .kana-header {
-    font-size: 8vw !important;
-  }
+    .kana-header {
+      font-size: 8vw !important;
+    }
 
-  p {
-    font-size: 3vw !important;
+    p {
+      font-size: 3vw !important;
+    }
   }
 
   .footer-socials {
@@ -406,6 +408,33 @@ footer {
   .disclaimer {
     font-size: 0.7rem !important;
   }
+
+  .indiv-lesson {
+    width: 60vw !important;
+    padding-left: 10px;
+    margin: 0 auto;
+
+    h1 {
+      color: $lesson-blue;
+    }
+
+    .kana-lesson-image {
+      max-width: 50vw !important;
+      margin: 0 auto;
+    }
+
+    .kana-info {
+      font-size: 2vw;
+    }
+    a {
+      font-size: 2.5vw;
+    }
+  }
+
+
+
+
+
 }
 
 @media(min-width: 970px) {
@@ -450,6 +479,28 @@ footer {
   }
   .disclaimer {
     font-size: 1rem !important;
+  }
+
+  .indiv-lesson {
+    width: 60vw !important;
+    padding-left: 10px;
+    margin: 0 auto;
+
+    h1 {
+      color: $lesson-blue;
+    }
+
+    .kana-lesson-image {
+      max-width: 50vw !important;
+      margin: 0 auto;
+    }
+
+    .kana-info {
+      font-size: 10vw !important;
+    }
+    a {
+      font-size: 2.5vw;
+    }
   }
 
 
