@@ -126,7 +126,7 @@ body {
 }
 
 nav {
-  background-color: $blue;
+  background: linear-gradient(yellow, $hover, $orange);
   padding: 9px 5px;
 
   .nav-link {
@@ -146,8 +146,6 @@ footer {
   text-align: center;
   color: #004080;
   padding-top: 5px;
-  clear: both;
-  position: inherit;
 
   .footer-socials {
     padding-bottom: 7px;
@@ -172,6 +170,41 @@ footer {
   a:hover {
     color: $light-blue;
     transition: 2s;
+  }
+}
+
+///////SIGNED IN HOMEPAGE VIEW///
+
+.homepage {
+  @extend .home-main;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  min-height: 35vh;
+  font-size: 6vw;
+
+  .welcome-blurb {
+    font-size: 2rem;
+  }
+
+  .sugoi {
+    margin-bottom: 0 !important;
+  }
+
+}
+
+.personal-stats {
+  @extend .home-header;
+  min-height: 35vh;
+  #hello-kana {
+    @extend #welcome-kana;
+    font-size: 2.2rem;
+    padding-top: 20px;
+    padding-bottom: 5px !important;
+  }
+
+  #hello-english {
+    @extend #welcome-english;
+      font-size: 1.7rem;
   }
 }
 
@@ -218,7 +251,7 @@ footer {
       border-radius: 3px;
       border: 1px solid white;
       background-color: #3B5998;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
      }
   }
 }
@@ -245,6 +278,7 @@ footer {
 }
 
 
+
 ////////IMAGES so far! //////
 .kana-image {
   width: 24vw;
@@ -255,6 +289,36 @@ footer {
 }
 
 /////////////MEDIA Queries////////
+@media (min-width: 500px) {
+  .personal-stats {
+    min-height: 45vh !important;
+    #hello-kana {
+      font-size: 8rem !important;
+    }
+    #hello-english {
+        font-size: 5rem !important;
+    }
+  }
+
+  .homepage {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    min-height: 35vh;
+    font-size: 6vw;
+
+    .welcome-blurb {
+      font-size: 3.5rem;
+    }
+
+    li {
+      font-size: 2.5rem;
+    }
+
+    .sugoi {
+      margin-bottom: 0 !important;
+    }
+  }
+}
 @media (min-width: 730px) {
   .english-header {
     padding: 10px !important;

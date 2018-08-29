@@ -12,20 +12,21 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  
+
 
   <body>
 
     <nav>
 
         <% if @current_user.present? %>
+        <%=  link_to 'Home', root_path, :class => "nav-link" %>
         <%= link_to 'My Lessons', lessons_path, :class => 'lesson-btn' %>
-        <%# link_to 'My Quizzes', lesson_test_questions_path(@lesson) %>
+        <%# link_to 'My Quizzes',  %>
         <%#  quiz_path, :class => 'quiz-btn' %>
           <%= link_to 'Hiragana Chart', characters_path, :class => "nav-link" %>
           <%= link_to 'Practice Writing', :class => "nav-link" %>
-          <%= link_to 'Menu', :class => "nav-link" %> <%# make this dropdown %>
-          <%=  link_to 'My Profile', users_profile_path, :class => "nav-link" %> <%# make this dropdown %>
+          <%= link_to 'Menu', :class => "nav-link" %>
+
           <%=  link_to 'Log Out', login_path, :method => 'delete', :class => "nav-link" %> <%# make this dropdown %>
 
           <%= link_to 'Admin Area', users_path if @current_user.admin? %>

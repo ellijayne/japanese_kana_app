@@ -23,18 +23,33 @@
   <% else %>
 
     <main>
-      <div class="homepage">
 
-        <div class="personal-btns">
-          <%= link_to 'My Lessons', lessons_path  %>
-          <%# #lesson_path, :class => 'lesson-btn' %>
-          <%= link_to 'My Quizzes' %>
-          <%#  quiz_path, :class => 'quiz-btn' %>
-        </div> <!--end of personal-btns-->
 
         <div class="personal-stats">
-          <p>Welcome back <%= "#{@current_user.username.capitalize}" %></p>
-            <p>You have currently learned XYZ, your next lesson is XYZ, your current leanring streak is X days in a row. Your current score percentage is X%</p>
+          <p id="hello-kana">こんにちは！</p>
+          <p id="hello-english">Welcome back <%= "#{@current_user.username.capitalize}" %></p>
+        </div>
+
+
+            <div class="homepage">
+            <h5 class="welcome-blurb">
+              Here are your latest test scores:</h5>
+              <% @current_user.enrolments.each do |e| %>
+              <ul>
+                <li>
+                  <%= "#{(e.lesson.lessonName).split(':').shift}: #{e.score}/5" %>
+                </li>
+              </ul>
+              <% end %>
+              <p class="sugoi">
+                すごい (sugoi)！ Wow!
+              </p>
+              <p class="sugoi">
+                よくやったね (yoku yattane)！ Well done!
+              </p>
+
+               <!-- <p>
+                IDEAS FOR ANOTHER TIME TODO: XYZ, your next lesson is XYZ, your current leanring streak is X days in a row. Your current score percentage is X%</p> -->
         </div>
     </main>
 

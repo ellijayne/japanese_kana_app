@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def profile
     @user = @current_user
-    render :show
+    render :home
   end
 
   private
