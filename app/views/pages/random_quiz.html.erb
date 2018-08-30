@@ -1,0 +1,16 @@
+<div class="random-quiz">
+  <h1>Test your knowledge with a randomized quiz!</h1>
+  <h3>Type the sound of the Hiragana Kana in the box below it</h3>
+
+  <% @questions.each do |question| %>
+    <p class="test-question"><%= question.testQuestion %></p>
+
+    <%= text_field_tag(:text, "", :class => "input-field") %>
+  <% end %>
+
+  <%= content_tag :div, id: "kana-answer", data: {answer: @lesson.questions} do %>
+  <% end %>
+
+ <%= submit_tag("Submit", :class => "kana-submit") %>
+
+</div>

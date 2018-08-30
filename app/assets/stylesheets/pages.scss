@@ -334,6 +334,7 @@ footer {
     color: $lesson-blue;
     text-decoration: none;
     font-size: 5vw;
+    padding-bottom: 20px;
   }
 
   a:hover {
@@ -347,10 +348,32 @@ footer {
 //////////////QUIZ PAGE///////
 
 .test-page {
-    margin: auto 0;
+  margin: auto 0;
   @extend .lesson-index;
+  padding-left: 0;
+  // display:flex;
 
-    padding-left: 20px;
+
+  .test-form-container {
+    text-align: center;
+    width: 90vw;
+    @extend .login-form-container;
+  }
+
+  .test-question-grid {
+    max-width: 90vw;
+    display:flex;
+  }
+
+  .test-question {
+    // display:flex;
+    width: 10vw;
+    height: 70px;
+  }
+
+  .input-field {
+    width: 10vw;
+  }
 
   h1 {
     color: white;
@@ -360,18 +383,21 @@ footer {
     color: white;
     font-size: 5vw;
     text-align: center;
+    padding-bottom: 35px;
   }
 
   p {
     color: white;
-    font-size: 8vw;
+    font-size: 5vw;
 
   }
+
   .kana-submit {
     color: white;
      background-color: $blue;
-     margin: 10px 0;
-     padding: 5px 10px;
+     margin: 36px 0;
+     padding: 10px 10px;
+     border-radius: 4px;
   }
 }
 
@@ -422,15 +448,16 @@ footer {
   .test-page {
     min-height: 80vh;
 
-    .login-form-container {
+    .test-form-container {
       max-width: 80vw;
       margin: 0 auto;
     }
+
     h1 {
       font-size: 5rem;
     }
     h3 {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       text-align: center;
     }
 
@@ -438,10 +465,8 @@ footer {
       position: relative;
       z-index: 2;
       color: white;
-      font-size: 8vw;
+      font-size: 3rem;
     }
-
-
   }
 }
 
@@ -475,10 +500,7 @@ footer {
     width: 60vw !important;
     padding-left: 10px;
     margin: 0 auto;
-
-    h1 {
-      color: $lesson-blue;
-    }
+    padding-bottom: 20px !important;
 
     .kana-lesson-image {
       max-width: 50vw !important;
@@ -492,11 +514,24 @@ footer {
       font-size: 2.5vw;
     }
   }
+  .test-form-container {
+    h3 {
+      font-size: 3rem !important;
+    }
 
+  }
+  .test-question {
+    // display:flex;
+    width: 5vw !important;
+    font-size: 5vw !important;
+    text-align: center;
+    margin: 0 auto;
+    // height: 70px;
+  }
 
-
-
-
+  .input-field {
+    width: 8vw !important;
+  }
 }
 
 @media(min-width: 970px) {
@@ -565,4 +600,13 @@ footer {
   }
 
 
+}
+
+// TODO: move this
+.error {
+  background-color: red;
+}
+
+.correct {
+  background-color: green;
 }

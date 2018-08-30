@@ -34,4 +34,9 @@ class LessonsController < ApplicationController
 
   end
 
+  def random
+    redirect_to Lesson.all.sample
+  end
+
+
 end

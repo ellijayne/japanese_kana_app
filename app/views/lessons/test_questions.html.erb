@@ -3,16 +3,25 @@
     <h1>がんばろう! Good Luck!</h1>
   </header>
 
-  <main class="login-form-container">
+  <main class="test-form-container">
     <!-- question and normal text box - finding ans happens in js.  -->
     <h3>Type the sound of the Hiragana Kana in the box below it</h3>
 
+    <div class="test-question-grid">
     <% @lesson.questions.each do |question| %>
-      <p class="test-question"><%= question.testQuestion %></p>
+
+        <p class="test-question"><%= question.testQuestion %></p>
 
 
       <%= text_field_tag(:text, "", :class => "input-field") %>
+
+
     <% end %>
+
+        </div>
+
+
+
 
     <%= content_tag :div, id: "kana-answer", data: {answer: @lesson.questions} do %>
     <% end %>
@@ -20,12 +29,9 @@
    <%= submit_tag("Submit", :class => "kana-submit") %>
 
    <div class="display-result">
-       <% @current_user.enrolments.each do |e| %>
+       <% @current_user.enrolments.where(:lesson_id => params[:lesson_id]).each do |e| %>
          <p>
            <%= "Your previous score for this lesson was: #{e.score}" %>
-         </p>
-         <p class="kana-wrong">
-          <%= "You got the following hiragana wrong: " %>
          </p>
        <% end %>
    </div>
