@@ -11,7 +11,7 @@
 class Lesson < ApplicationRecord
   has_many :characters
   has_many :questions
-  has_many :enrolments
+  has_many :enrolments, :optional => true
   def kanas
     self.characters.pluck(:kana).join ' '
   end
