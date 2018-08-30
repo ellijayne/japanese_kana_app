@@ -13,7 +13,7 @@
 #
 
 class User < ApplicationRecord
-  has_many :enrolments, :optional => true
+  has_many :enrolments
 
   #VALIDATIONS/PASSWORDS
   has_secure_password
@@ -23,11 +23,13 @@ class User < ApplicationRecord
   validates_presence_of :email, :message => "Sorry, the email field cannot be blank."
   validates_uniqueness_of :email, :message => "There is already an account associated with that email address" #user can only have account if they enter an email address AND it is not already an email address in the DB
 
+
   def self.find_or_create_by_omniauth(auth_hash)
     self.where(email: auth_hash['info']['email']).first_or_create do |u|
       u.username = auth_hash['info']['name']
       u.password = SecureRandom.hex
     end
+
   end
 
 

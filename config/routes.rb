@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # post '/signup' => 'user#create'
   get '/login' => 'session#new' #login form
   get '/auth/facebook/callback' => 'session#fbcreate'
+
   post '/login' => 'session#create' #perform the login
   delete '/login' => 'session#destroy' #perform signout/'delete' the signin
 
