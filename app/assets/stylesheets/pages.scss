@@ -7,24 +7,6 @@
   src: url('../norwester.otf');
 }
 
-///////////////RESET///////////////////
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 108px;
-}
-
-a {
-  text-decoration: none;
-}
-
 ///////////VARIABLES///////////
 $japanese-font: 'Noto Sans Japanese', sans-serif; //this is simple and standard good one to learn on
 $japanese-font2: 'Kokoro', serif; //but more scribbly but nice.
@@ -41,9 +23,25 @@ $lesson-blue: #6EBBFD;
 $burnt-orange: rgb(178, 73, 0);
 $burnt-orange-t: rgba(178, 73, 0, 0.8);
 
-body {
-  font-family: $english-font;
 
+////////RESET & BODY///////
+///////////////RESET///////////////////
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 108px;
+  font-family: $english-font;
 }
 
 //////////LANDING PAGE//////////
@@ -113,6 +111,7 @@ body {
   color: white;
   text-align: center;
   padding-top: 20px;
+  padding-bottom: 50px;
 
   #welcome-kana {
     font-size: 2rem;
