@@ -19,5 +19,16 @@
 
    <%= submit_tag("Submit", :class => "kana-submit") %>
 
+   <div class="display-result">
+       <% @current_user.enrolments.each do |e| %>
+         <p>
+           <%= "Your previous score for this lesson was: #{e.score}" %>
+         </p>
+         <p class="kana-wrong">
+          <%= "You got the following hiragana wrong: " %>
+         </p>
+       <% end %>
+   </div>
+
   </main>
 </div>

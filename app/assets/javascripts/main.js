@@ -1,39 +1,34 @@
 console.log("こんにちわ！ from the console.");
+
 let score = 0;
+
 $(document).ready(function() {
-  // console.log('document ready');
 
   $(".input-field").on("keyup", function(e) {
       let kanaValue = $(this).val();
-      console.log(kanaValue)
-      console.log( wanakana.toKana( kanaValue ))
       $(this).val(wanakana.toKana(kanaValue))
-    // }
   });
 
 
   $('.kana-submit').on('click', function(e) {
-
     // console.log('clicked')
+    e.preventDefault();
     let rubyTestAns = $('#kana-answer').data('answer');
-    // console.log(rubyTestAns);
-
-    // on submit need to look at .val() of user input in "kana-input"
-
-    // if .val() of kana-input ===  @question.answer then score += 1 else 'thats incorrect you should study some more.'
-
     let arr = $('.input-field')
     for (var i = 0; i < arr.length; i++) {
       let kanaValue = arr[i].value
       let answer = rubyTestAns[i].answer;
-      console.log(kanaValue);
-      console.log(answer);
+      // console.log(kanaValue);
+      // console.log(answer);
 
       answerA = answer.split(',')[0];
-      answerB = answer.split(',')[1];
-      if ((kanaValue === answerA) || (kanaValue === answerB)) {
+      // answerB = answer.split(',')[1];
+      if (kanaValue === answerA) {
         score += 1;
+        storeWrong = (kanaValue !== answerA)
+        console.log(storeWrong);
       } else {
+        // $(".kana-wrong").text()
         console.log('study more');
       }
 
@@ -43,10 +38,11 @@ $(document).ready(function() {
       const id = window.location.pathname.split('/')[2]
       window.location = `/lessons/${id}/result?score=${ score }`
 
-
-
   }); //end of click function
-
+  //
+  // const displayIncorrectAns = function () {
+  //
+  // }
 
 
 

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'questions/show'
   root :to => "pages#home"
     get "/" => 'pages#home'
+    # get "/random_quiz" => 'pages#random_quiz'
     get '/users/profile' => 'users#profile'
     resources :users
 

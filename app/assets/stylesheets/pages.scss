@@ -294,6 +294,7 @@ footer {
 .lesson-index {
   background: linear-gradient( #004080, $blue, $light-blue, #FFFF99);
   color: white;
+  min-height: 80vh;
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 40px;
@@ -366,12 +367,17 @@ footer {
     font-size: 8vw;
 
   }
-  .submit-btn {
+  .kana-submit {
     color: white;
      background-color: $blue;
      margin: 10px 0;
      padding: 5px 10px;
   }
+}
+
+/////////////QUIZ RESULTS PAGE /////////////
+.quiz-result-container {
+  @extend .lesson-index;
 }
 
 /////////////MEDIA Queries////////
