@@ -32,9 +32,14 @@
 
 
             <div class="homepage">
-            <h5 class="welcome-blurb">
-              Here are your latest test scores:</h5>
               <% @current_user.enrolments.each do |e| %>
+                <% if e.score.nil? %>
+                <h5 class="welcome-blurb">Get studying now! がんばって　ください！</h5>
+                <% else %>
+                <h5 class="welcome-blurb">
+                Here are your latest test scores:</h5>
+                <% end %>
+
               <ul>
                 <li>
                   <%= "#{(e.lesson.lessonName).split(':').shift}: #{e.score}/5" %>

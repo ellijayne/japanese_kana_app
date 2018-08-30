@@ -13,7 +13,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require jquery
-
+//= require wanakana.min
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
