@@ -1,4 +1,4 @@
-<div class="indiv-lesson">
+<div id="indiv-lesson">
 
   <header>
     <h1><%= @lesson.lessonName %></h1>
@@ -18,7 +18,7 @@
 
     <%= link_to "Take Quiz on #{@lesson.kanas}", lesson_test_questions_path(@lesson) %>
     <br />
-    <%= link_to 'Back to profile', root_path %>
+    <%= link_to 'Back to profile', root_path, :class => "back-btn" %>
 
 
   </main>

@@ -15,7 +15,6 @@
 
     </main>
 
-
   <% else %>
 
     <main>
@@ -26,26 +25,28 @@
         </div>
 
             <div class="homepage">
-              <% @current_user.enrolments.each do |e| %>
-                <% if e.score.nil? %>
-                <h5 class="welcome-blurb">Get studying now! がんばって　ください！</h5>
-                <% else %>
-                <h5 class="welcome-blurb">
-                Here are your latest test scores:</h5>
-                <% end %>
+              <h5 class="welcome-blurb-scores">
+              Here are your latest test scores:</h5>
 
-              <ul>
-                <li>
-                  <%= "#{(e.lesson.lessonName).split(':').shift}: #{e.score}/5" %>
-                </li>
-              </ul>
+              <% if @current_user.enrolments.length > 0 %>
+                <% @current_user.enrolments.each do |e| %>
+                  <ul>
+                    <li>
+                      <%= "#{(e.lesson.lessonName).split(':').shift}: #{e.score}/5" %>
+                    </li>
+                  </ul>
+                <% end %>
+              <% else %>
+                <h5 class="welcome-blurb">Get studying now! がんばって　ください！</h5>
               <% end %>
+
               <p class="sugoi">
                 すごい (sugoi)！ Wow!
               </p>
               <p class="sugoi">
                 よくやったね (yoku yattane)！ Well done!
               </p>
+
 
                <!-- <p>
                 IDEAS FOR ANOTHER TIME TODO: XYZ, your next lesson is XYZ, your current leanring streak is X days in a row. Your current score percentage is X%</p> -->

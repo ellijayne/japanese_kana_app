@@ -151,6 +151,7 @@ footer {
   bottom: 0;
   width: 100%;
   background: linear-gradient(yellow, $hover, $orange);
+  padding-top: 20px;
   margin: 0 auto;
   text-align: center;
   color: #004080;
@@ -318,7 +319,7 @@ footer {
 
 ////////////INDIVIDUAL LESSONS/////
 
-.indiv-lesson {
+#indiv-lesson {
   max-width: 90vw;
   padding-left: 10px;
 
@@ -328,6 +329,10 @@ footer {
 
   .kana-lesson-image {
     width: 90vw;
+  }
+
+  .back-btn {
+    padding-bottom: 20px;
   }
   a {
     color: $lesson-blue;
@@ -413,9 +418,13 @@ footer {
       font-size: 8rem !important;
     }
     #hello-english {
-        font-size: 5rem !important;
+      font-size: 5rem !important;
+    }
+    .welcome-blurb {
+      font-size: 2rem !important;
     }
   }
+
 
   .homepage {
     padding-top: 20px;
@@ -426,13 +435,15 @@ footer {
     .welcome-blurb {
       font-size: 3.5rem;
     }
+    .welcome-blurb-scores {
+      font-size: 2rem;
+    }
 
     li {
       font-size: 2.5rem;
     }
-
     .sugoi {
-      margin-bottom: 0 !important;
+      font-size: 1.2rem !important;
     }
   }
   .lesson-index {
@@ -495,7 +506,7 @@ footer {
     font-size: 0.7rem !important;
   }
 
-  .indiv-lesson {
+  #indiv-lesson {
     width: 60vw !important;
     padding-left: 10px;
     margin: 0 auto;
@@ -541,7 +552,7 @@ footer {
   .kana-header {
     font-size: 5rem !important;
   }
-}
+
 
 @media(min-width: 1240px) {
   .english-header {
@@ -578,10 +589,12 @@ footer {
     font-size: 1rem !important;
   }
 
-  .indiv-lesson {
+  #indiv-lesson {
     width: 60vw !important;
     padding-left: 10px;
     margin: 0 auto;
+    margin-bottom: 4rem;
+
 
     h1 {
       color: $lesson-blue;
@@ -597,15 +610,14 @@ footer {
       font-size: 2.5vw;
     }
   }
-
-
+}
 }
 
 // TODO: move this
 .error {
-  background-color: red;
+  background-color: #EE2C2C;
 }
 
 .correct {
-  background-color: green;
+  background-color: #32CD32;
 }
