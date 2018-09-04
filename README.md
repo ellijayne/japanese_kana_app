@@ -8,7 +8,7 @@ Welcome to Kana-o-Manabu (Learn Kana!)
 
 This app is designed to help you learn the Hiragana kana set and get you on your way to ready some Japanese!
 
-Visit the live site here :point_right: <a href="https://kana-o-manabu.herokuapp.com/">Kana-o-Manabu</a>
+Visit the live site here :point_right: <a href="https://kana-manabu.herokuapp.com/">Kana-o-Manabu</a>
 
 ##Operating Instructions:
 1. After you visit the page create an account, you can do this via the sign up form or authorize the app with Facebook.

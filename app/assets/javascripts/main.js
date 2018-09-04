@@ -50,3 +50,8 @@ $(document).ready(function() {
 
   //(if score >= 3 can move onto next lesson maybe?)
 });
+
+
+for (var i = 0; i < array.length; i++) {
+  array[i]
+}
