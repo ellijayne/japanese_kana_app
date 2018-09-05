@@ -29,7 +29,7 @@ $(document).ready(function() {
     for (var i = 0; i < arr.length; i++) {
       let kanaValue = arr[i].value
       let answer = rubyTestAns[i].answer;
-      // console.log(kanaValue);
+      console.log("kanavalue " + kanaValue);
       // console.log(answer);
 
       answerA = answer.split(',')[0];
@@ -50,8 +50,3 @@ $(document).ready(function() {
 
   //(if score >= 3 can move onto next lesson maybe?)
 });
-
-
-for (var i = 0; i < array.length; i++) {
-  array[i]
-}
