@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-
+root :to => "pages#home"
+  get "/" => 'pages#home'
+    get '/users/profile' => 'users#profile'
+      resources :users
   get 'questions/index'
   get 'questions/show'
-  root :to => "pages#home"
-    get "/" => 'pages#home'
+
+
     get "/lesson/random" => 'lessons#random'
-    get '/users/profile' => 'users#profile'
-    resources :users
+
 
 
   # get '/signup' => 'user#new'
